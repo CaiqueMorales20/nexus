@@ -70,5 +70,5 @@
 }
 
 .container{
-  @apply mx-auto w-[90%] max-w-[1500px]
+  @apply mx-auto w-[90vw] max-w-[1500px]
 }
