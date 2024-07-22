@@ -45,7 +45,7 @@ export function CategoryCarousel() {
   const [isEnd, setIsEnd] = useState(false)
 
   return (
-    <section className="container mt-20">
+    <section className="container mt-40">
       <div className="w-full">
         <Swiper
           spaceBetween={20}
