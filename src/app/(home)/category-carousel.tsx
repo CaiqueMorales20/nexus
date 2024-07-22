@@ -76,7 +76,7 @@ export function CategoryCarousel() {
                   height={422}
                 /> */}
                 <Button
-                  className="invisible mx-auto mb-10 mt-auto w-[90%] duration-200 group-hover:visible"
+                  className="invisible mx-auto mb-6 mt-auto w-[90%] duration-200 group-hover:visible"
                   size={'lg'}
                 >
                   Noteboooks
