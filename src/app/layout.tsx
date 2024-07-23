@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Michroma } from 'next/font/google'
 
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { ThemeProvider } from '@/theme/theme-provider'
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
