@@ -24,7 +24,7 @@ export function Header() {
         />
         <nav className="mx-auto hidden gap-4 md:flex">
           <HeaderLink href="/">Home</HeaderLink>
-          <HeaderLink href="/shop">Shop</HeaderLink>
+          <HeaderLink href="/products">Shop</HeaderLink>
           <HeaderLink href="/our-story">Our Story</HeaderLink>
           <HeaderLink href="/blog">Blog</HeaderLink>
           <HeaderLink href="/contact-us">Contact Us</HeaderLink>
@@ -52,7 +52,7 @@ export function Header() {
           </DialogDescription>
           <nav className="flex flex-col gap-4">
             <HeaderLink href="/">Home</HeaderLink>
-            <HeaderLink href="/shop">Shop</HeaderLink>
+            <HeaderLink href="/products">Shop</HeaderLink>
             <HeaderLink href="/our-story">Our Story</HeaderLink>
             <HeaderLink href="/blog">Blog</HeaderLink>
             <HeaderLink href="/contact-us">Contact Us</HeaderLink>

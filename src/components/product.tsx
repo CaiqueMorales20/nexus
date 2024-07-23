@@ -21,7 +21,7 @@ export function Product() {
             <Heart className="h-4 w-4 text-background" />
           </button>
           <Button className="mx-auto mb-6 w-[90%] self-end" size={'lg'}>
-            Noteboooks
+            Buy now
           </Button>
         </div>
       </div>
