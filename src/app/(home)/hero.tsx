@@ -15,10 +15,16 @@ export function Hero() {
       /> */}
       <div className="container relative z-10 mt-10 grid h-[855px] w-full grid-cols-2 gap-4">
         <div className="my-auto">
-          <span className="mb-2 block text-xl">Latest release</span>
-          <h1 className="mb-2 text-7xl font-black">Alienware M16</h1>
-          <h2 className="uppercase italic">Up to 20% discount</h2>
-          <Button className="mt-12 gap-2" size={'lg'}>
+          <span className="mb-2 block text-base md:text-xl">
+            Latest release
+          </span>
+          <h1 className="mb-2 text-5xl font-black md:text-7xl">
+            Alienware M16
+          </h1>
+          <h2 className="text-sm uppercase italic md:text-base">
+            Up to 20% discount
+          </h2>
+          <Button className="mt-6 gap-2 md:mt-12" size={'lg'}>
             Shop Now <ArrowRight className="w-4" />
           </Button>
         </div>

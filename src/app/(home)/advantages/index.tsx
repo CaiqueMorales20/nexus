@@ -2,8 +2,8 @@ import { CircleDollarSign, CreditCard, Headset, Package } from 'lucide-react'
 
 export function Advantages() {
   return (
-    <section className="container my-40">
-      <div className="grid grid-cols-4">
+    <section className="container my-20 md:my-40">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Package className="mb-4" />
           <h3 className="mb-1 font-bold">Free Shipping</h3>

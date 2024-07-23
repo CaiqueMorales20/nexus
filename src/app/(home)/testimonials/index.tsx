@@ -14,12 +14,20 @@ export function Testimonials() {
   const [isEnd, setIsEnd] = useState(false)
 
   return (
-    <section className="mt-40 w-full bg-muted">
-      <div className="container py-20">
+    <section className="mt-20 w-full bg-muted md:mt-40">
+      <div className="container py-12 md:py-20">
         <div className="w-full">
           <Swiper
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={1}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1000: {
+                slidesPerView: 3,
+              },
+            }}
             onSlideChange={(swiper) => {
               setIsBeginning(swiper.isBeginning)
               setIsEnd(swiper.isEnd)
@@ -29,7 +37,7 @@ export function Testimonials() {
               slot="container-start"
               className="mb-10 flex items-center justify-between"
             >
-              <h2 className="text-2xl font-bold">
+              <h2 className="text-lg font-bold md:text-2xl">
                 What our costumers say&apos;s
               </h2>
               <div className="flex items-center justify-between gap-2">

@@ -14,7 +14,7 @@ function CarouselArrow({
   return (
     <button
       className={twMerge(
-        'flex h-10 w-10 cursor-pointer items-center justify-center rounded-md bg-foreground text-background',
+        'flex h-8 w-8 cursor-pointer items-center justify-center rounded-md bg-foreground text-background md:h-10 md:w-10',
         !isActive && 'bg-foreground/60',
       )}
       disabled={!isActive}

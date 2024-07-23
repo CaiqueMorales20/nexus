@@ -13,11 +13,19 @@ export function CategoryCarousel() {
   const [isEnd, setIsEnd] = useState(false)
 
   return (
-    <section className="container mt-40">
+    <section className="container mt-20 md:mt-40">
       <div className="w-full">
         <Swiper
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={1}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1000: {
+              slidesPerView: 4,
+            },
+          }}
           onSlideChange={(swiper) => {
             setIsBeginning(swiper.isBeginning)
             setIsEnd(swiper.isEnd)
@@ -27,7 +35,9 @@ export function CategoryCarousel() {
             slot="container-start"
             className="mb-10 flex items-center justify-between"
           >
-            <h2 className="text-2xl font-bold">Shop by categories</h2>
+            <h2 className="text-xl font-bold md:text-2xl">
+              Shop by categories
+            </h2>
             <div className="flex items-center justify-between gap-2">
               <CarouselArrow isActive={!isBeginning} direction="prev" />
               <CarouselArrow isActive={!isEnd} direction="next" />

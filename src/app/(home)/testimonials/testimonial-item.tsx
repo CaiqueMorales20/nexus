@@ -10,7 +10,7 @@ export function TestimonialItem() {
           <Star key={i} className="" fill="#fff" />
         ))}
       </div>
-      <p className="mb-6">
+      <p className="mb-4 text-sm md:mb-6 md:text-base">
         Nexus transformed my tech experience! The notebooks are powerful, and
         the headphones are top-notch. Quick shipping and excellent customer
         service. Highly recommended!
@@ -21,8 +21,8 @@ export function TestimonialItem() {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <div>
-          <h5 className="text-sm font-bold">Leslie Alexander</h5>
-          <h6 className="text-sm">Model</h6>
+          <h5 className="text-xs font-bold md:text-sm">Leslie Alexander</h5>
+          <h6 className="text-xs md:text-sm">Model</h6>
         </div>
       </div>
     </div>
