@@ -1,3 +1,6 @@
+import { getCategories } from '@/utils/get-categories'
+import { getProducts } from '@/utils/get-products'
+
 import { Advantages } from './(home)/advantages'
 import { BestSellers } from './(home)/best-sellers'
 import { CategoryCarousel } from './(home)/category-carousel'
@@ -6,12 +9,15 @@ import { LatestPosts } from './(home)/latest-posts'
 import { Pitch } from './(home)/pitch'
 import { Testimonials } from './(home)/testimonials'
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProducts()
+  const categories = await getCategories()
+
   return (
     <main className="">
       <Hero />
-      <CategoryCarousel />
-      <BestSellers />
+      <CategoryCarousel categories={categories} />
+      <BestSellers products={products} />
       <Pitch />
       <Testimonials />
       <LatestPosts />

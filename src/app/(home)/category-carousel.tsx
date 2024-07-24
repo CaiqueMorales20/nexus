@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { CarouselArrow } from '@/components/carousel-arrow'
 import { Button } from '@/components/ui/button'
 
-export function CategoryCarousel() {
+export function CategoryCarousel({ categories }: { categories: string[] }) {
   const [isBeginning, setIsBeginning] = useState(true)
   const [isEnd, setIsEnd] = useState(false)
 
@@ -38,12 +38,14 @@ export function CategoryCarousel() {
             <h2 className="text-xl font-bold md:text-2xl">
               Shop by categories
             </h2>
-            <div className="flex items-center justify-between gap-2">
-              <CarouselArrow isActive={!isBeginning} direction="prev" />
-              <CarouselArrow isActive={!isEnd} direction="next" />
-            </div>
+            {categories.length > 4 && (
+              <div className="flex items-center justify-between gap-2">
+                <CarouselArrow isActive={!isBeginning} direction="prev" />
+                <CarouselArrow isActive={!isEnd} direction="next" />
+              </div>
+            )}
           </div>
-          {Array.from({ length: 6 }).map((_, i) => (
+          {categories.map((category, i) => (
             <SwiperSlide key={i}>
               <div className="group relative flex h-[26rem] w-full justify-center bg-muted">
                 {/* <Image
@@ -54,10 +56,10 @@ export function CategoryCarousel() {
                   height={422}
                 /> */}
                 <Button
-                  className="invisible mx-auto mb-6 mt-auto w-[90%] duration-200 group-hover:visible"
+                  className="invisible mx-auto mb-6 mt-auto w-[90%] capitalize duration-200 group-hover:visible"
                   size={'lg'}
                 >
-                  Noteboooks
+                  {category}
                 </Button>
               </div>
             </SwiperSlide>

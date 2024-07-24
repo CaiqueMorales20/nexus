@@ -1,3 +1,4 @@
+import { Product as ProductType } from '@/@types/product'
 import { Product } from '@/components/product'
 import {
   Select,
@@ -9,11 +10,13 @@ import {
 
 import { Pagination } from './pagination'
 
-export function Showcase() {
+export function Showcase({ products }: { products: ProductType[] }) {
   return (
     <section>
       <header className="mb:mb-16 mb-8 flex items-center justify-between gap-4">
-        <span className="text-sm md:text-2xl">Showing 1-20 of 200 results</span>
+        <span className="text-sm md:text-2xl">
+          Showing 1-20 of {products.length} results
+        </span>
         <Select>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Show by latest" />
@@ -24,15 +27,11 @@ export function Showcase() {
           </SelectContent>
         </Select>
       </header>
+
       <div className="grid gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {products.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
       </div>
 
       <Pagination />
