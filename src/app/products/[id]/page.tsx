@@ -7,15 +7,14 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { getCategories } from '@/utils/get-categories'
-import { getProducts } from '@/utils/get-products'
+import { getProduct } from '@/utils/get-product'
 
-import { Filters } from './filters'
-import { Showcase } from './showcase'
-
-export default async function Products() {
-  const products = await getProducts()
-  const categories = await getCategories()
+export default async function Products({
+  params: { id },
+}: {
+  params: { id: string }
+}) {
+  const product = await getProduct(id)
 
   return (
     <main className="container min-h-screen">
@@ -26,15 +25,14 @@ export default async function Products() {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Products</BreadcrumbPage>
+            <BreadcrumbLink href="/products">Products</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>{product.name}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-
-      <div className="mt-12 grid gap-10 md:mt-20 md:grid-cols-showcase">
-        <Filters categories={categories} />
-        <Showcase products={products} />
-      </div>
 
       <Advantages />
     </main>

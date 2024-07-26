@@ -1,7 +1,7 @@
+import { Advantages } from '@/components/advantages'
 import { getCategories } from '@/utils/get-categories'
 import { getProducts } from '@/utils/get-products'
 
-import { Advantages } from './(home)/advantages'
 import { BestSellers } from './(home)/best-sellers'
 import { CategoryCarousel } from './(home)/category-carousel'
 import { Hero } from './(home)/hero'

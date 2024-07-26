@@ -8,14 +8,14 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-import { Pagination } from './pagination'
+// import { Pagination } from './pagination'
 
 export function Showcase({ products }: { products: ProductType[] }) {
   return (
     <section>
       <header className="mb:mb-16 mb-8 flex items-center justify-between gap-4">
-        <span className="text-sm md:text-2xl">
-          Showing 1-20 of {products.length} results
+        <span className="text-sm font-bold md:text-2xl">
+          Showing {products.length} results
         </span>
         <Select>
           <SelectTrigger className="w-[180px]">
@@ -34,7 +34,7 @@ export function Showcase({ products }: { products: ProductType[] }) {
         ))}
       </div>
 
-      <Pagination />
+      {/* <Pagination /> */}
     </section>
   )
 }

@@ -1,5 +1,6 @@
 import { Heart } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Product as ProductType } from '@/@types/product'
 import { Button } from '@/components/ui/button'
@@ -7,7 +8,7 @@ import { formatCurrency } from '@/utils/format-currency'
 
 export function Product({ product }: { product: ProductType }) {
   return (
-    <div className="w-full">
+    <Link href={`/products/${product.id}`} className="w-full">
       <div className="group relative mb-6 flex h-[400px] w-full bg-muted">
         <Image
           src={product.imageURL}
@@ -36,6 +37,6 @@ export function Product({ product }: { product: ProductType }) {
           {/* <span className="text-gray-400 line-through">$40.00</span> */}
         </span>
       </div>
-    </div>
+    </Link>
   )
 }

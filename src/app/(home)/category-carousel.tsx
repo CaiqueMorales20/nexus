@@ -47,7 +47,7 @@ export function CategoryCarousel({ categories }: { categories: string[] }) {
           </div>
           {categories.map((category, i) => (
             <SwiperSlide key={i}>
-              <div className="group relative flex h-[26rem] w-full justify-center bg-muted">
+              <div className="group relative flex h-[26rem] w-full cursor-pointer justify-center bg-muted">
                 {/* <Image
                   className="-z-1 absolute inset-0 h-full w-full"
                   src={'/category-1.png'}
@@ -55,11 +55,14 @@ export function CategoryCarousel({ categories }: { categories: string[] }) {
                   width={308}
                   height={422}
                 /> */}
+                <h1 className="absolute inset-0 flex items-center justify-center text-center text-2xl font-black capitalize">
+                  {category}
+                </h1>
                 <Button
                   className="invisible mx-auto mb-6 mt-auto w-[90%] capitalize duration-200 group-hover:visible"
                   size={'lg'}
                 >
-                  {category}
+                  Shop now
                 </Button>
               </div>
             </SwiperSlide>
