@@ -5,7 +5,7 @@ import { Separator } from './ui/separator'
 export function Advantages() {
   return (
     <>
-      <Separator className="container my-20 md:my-40" />
+      <Separator className="my-20 md:container md:my-40" />
       <section className="container mb-20 md:mb-40">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
